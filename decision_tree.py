@@ -5,22 +5,22 @@ from sklearn.tree import export_graphviz
 from sklearn.model_selection import train_test_split
 from sklearn.datasets import load_breast_cancer
 
-# # Breast Cancer Dataset
-# breast_cancer_wisconsin_diagnostic = load_breast_cancer()
-# bc_features = pd.DataFrame(breast_cancer_wisconsin_diagnostic.data, columns=breast_cancer_wisconsin_diagnostic.feature_names)  # Các đặc trưng
-# bc_labels = pd.Series(breast_cancer_wisconsin_diagnostic.target, name="label")  # Nhãn: 0 = Malignant, 1 = Benign
-#
-# # White Wine Quality Dataset
-# file_path = './data/wine+quality/winequality-white.csv'
-# w_wine_data = pd.read_csv(file_path, sep=';')
-# w_wine_features = w_wine_data.iloc[:, :-1]
-# w_wine_labels = w_wine_data['quality']
-#
-# # Red Wine Quality Dataset
-# file_path = './data/wine+quality/winequality-red.csv'
-# r_wine_data = pd.read_csv(file_path, sep=';')
-# r_wine_features = r_wine_data.iloc[:, :-1]
-# r_wine_labels = r_wine_data['quality']
+# Breast Cancer Dataset
+breast_cancer_wisconsin_diagnostic = load_breast_cancer()
+bc_features = pd.DataFrame(breast_cancer_wisconsin_diagnostic.data, columns=breast_cancer_wisconsin_diagnostic.feature_names)  # Các đặc trưng
+bc_labels = pd.Series(breast_cancer_wisconsin_diagnostic.target, name="label")  # Nhãn: 0 = Malignant, 1 = Benign
+
+# White Wine Quality Dataset
+file_path = './data/wine+quality/winequality-white.csv'
+w_wine_data = pd.read_csv(file_path, sep=';')
+w_wine_features = w_wine_data.iloc[:, :-1]
+w_wine_labels = w_wine_data['quality']
+
+# Red Wine Quality Dataset
+file_path = './data/wine+quality/winequality-red.csv'
+r_wine_data = pd.read_csv(file_path, sep=';')
+r_wine_features = r_wine_data.iloc[:, :-1]
+r_wine_labels = r_wine_data['quality']
 
 # Titanic Dataset
 file_path = './data/Titanic/Titanic-Dataset.csv'
@@ -86,7 +86,7 @@ def export_decision_tree_graphviz(dataset, format):
 		graph.render(f"decision_tree_{train_key}_{test_key}", format=format, cleanup=True)  # Replace with desired filename (without extension)
 
 
-# export_decision_tree_graphviz(bc_datasets, f"decision_tree_bc", "png")
-# export_decision_tree_graphviz(w_wine_datasets, f"decision_tree_w_wine", "svg")
-export_decision_tree_graphviz(titanic_datasets, "svg")
+export_decision_tree_graphviz(bc_datasets, f"decision_tree_bc", "png")
+export_decision_tree_graphviz(w_wine_datasets, f"decision_tree_w_wine", "svg")
+# export_decision_tree_graphviz(titanic_datasets, "svg")
 
