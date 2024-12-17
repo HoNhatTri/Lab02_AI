@@ -1,0 +1,29 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label=<worst concave points &le; 0.145<br/>entropy = 0.954<br/>samples = 227<br/>value = [85, 142]<br/>class = 1>, fillcolor="#b0d8f5"] ;
+1 [label=<worst area &le; 844.75<br/>entropy = 0.376<br/>samples = 151<br/>value = [11, 140]<br/>class = 1>, fillcolor="#49a5e7"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<worst texture &le; 33.35<br/>entropy = 0.062<br/>samples = 138<br/>value = [1, 137]<br/>class = 1>, fillcolor="#3a9ee5"] ;
+1 -> 2 ;
+3 [label=<entropy = 0.0<br/>samples = 130<br/>value = [0, 130]<br/>class = 1>, fillcolor="#399de5"] ;
+2 -> 3 ;
+4 [label=<worst fractal dimension &le; 0.079<br/>entropy = 0.544<br/>samples = 8<br/>value = [1, 7]<br/>class = 1>, fillcolor="#55abe9"] ;
+2 -> 4 ;
+5 [label=<entropy = 0.0<br/>samples = 7<br/>value = [0, 7]<br/>class = 1>, fillcolor="#399de5"] ;
+4 -> 5 ;
+6 [label=<entropy = 0.0<br/>samples = 1<br/>value = [1, 0]<br/>class = 0>, fillcolor="#e58139"] ;
+4 -> 6 ;
+7 [label=<worst concavity &le; 0.191<br/>entropy = 0.779<br/>samples = 13<br/>value = [10, 3]<br/>class = 0>, fillcolor="#eda774"] ;
+1 -> 7 ;
+8 [label=<entropy = 0.0<br/>samples = 3<br/>value = [0, 3]<br/>class = 1>, fillcolor="#399de5"] ;
+7 -> 8 ;
+9 [label=<entropy = 0.0<br/>samples = 10<br/>value = [10, 0]<br/>class = 0>, fillcolor="#e58139"] ;
+7 -> 9 ;
+10 [label=<concavity error &le; 0.13<br/>entropy = 0.176<br/>samples = 76<br/>value = [74, 2]<br/>class = 0>, fillcolor="#e6843e"] ;
+0 -> 10 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+11 [label=<entropy = 0.0<br/>samples = 74<br/>value = [74, 0]<br/>class = 0>, fillcolor="#e58139"] ;
+10 -> 11 ;
+12 [label=<entropy = 0.0<br/>samples = 2<br/>value = [0, 2]<br/>class = 1>, fillcolor="#399de5"] ;
+10 -> 12 ;
+}

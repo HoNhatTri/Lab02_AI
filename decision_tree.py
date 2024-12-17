@@ -55,14 +55,14 @@ def prepare_datasets(features, labels):
 	return subsets
 
 
-# # Tạo các tập huấn luyện và kiểm tra cho Breast Cancer Dataset
-# bc_datasets = prepare_datasets(bc_features, bc_labels)
+ # Tạo các tập huấn luyện và kiểm tra cho Breast Cancer Dataset
+bc_datasets = prepare_datasets(bc_features, bc_labels)
 #
 # # Tạo các tập huấn luyện và kiểm tra cho White Wine Quality Dataset
-# w_wine_datasets = prepare_datasets(w_wine_features, w_wine_labels)
+w_wine_datasets = prepare_datasets(w_wine_features, w_wine_labels)
 #
 # # Tạo các tập huấn luyện và kiểm tra cho Red Wine Quality Dataset
-# r_wine_datasets = prepare_datasets(r_wine_features, r_wine_labels)
+r_wine_datasets = prepare_datasets(r_wine_features, r_wine_labels)
 
 # Tạo các tập huấn luyện và kiểm tra cho Titanic Dataset
 titanic_datasets = prepare_datasets(titanic_features, titanic_labels)
